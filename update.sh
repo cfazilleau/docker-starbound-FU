@@ -24,6 +24,7 @@ fi
 	+login "$1" \
 	+force_install_dir /starbound/ \
 	+app_update 211820 validate \
+ 	+workshop_download_item 211820 729480149 \
 	+quit \
 	&& rm /.update
 exit

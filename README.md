@@ -29,7 +29,7 @@ or
 
 ## Get the image
 ```sh
-docker pull ghcr.io/cfazilleau/frackin-universe-docker:main`
+docker pull ghcr.io/cfazilleau/frackin-universe-docker:main
 ```
 
 ## Run the image

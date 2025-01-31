@@ -1,5 +1,7 @@
 # This repo is a fork of [morgyn's starbound server docker](https://github.com/Morgyn/docker-starbound) adapted to include the [FrackinUniverse mod](https://github.com/sayterdarkwynd/FrackinUniverse).
 
+[![Docker image](https://github.com/cfazilleau/frackin-universe-docker/actions/workflows/docker-image.yml/badge.svg)](https://github.com/cfazilleau/frackin-universe-docker/actions/workflows/docker-image.yml)
+
 This is a docker image of the dedicated server for Stardbound with the [FrackinUniverse mod](https://github.com/sayterdarkwynd/FrackinUniverse).
 
 * [ http://playstarbound.com/ ]

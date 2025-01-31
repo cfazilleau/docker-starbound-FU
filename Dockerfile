@@ -1,7 +1,5 @@
 FROM ubuntu:22.04
 
-MAINTAINER morgyn
-
 RUN apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y && apt-get autoremove -y && apt-get install -y locales
 
 ENV LANG en_US.UTF-8
@@ -27,11 +25,10 @@ RUN mkdir -p /steamcmd
 RUN mkdir -p /starbound
 VOLUME ["/starbound"]
 RUN cd /steamcmd \
-        && wget -o /tmp/steamcmd.tar.gz http://media.steampowered.com/installer/steamcmd_linux.tar.gz \
-        && tar zxvf steamcmd_linux.tar.gz \
-        && rm steamcmd_linux.tar.gz \
-        && chmod +x ./steamcmd.sh
-
+    && wget -o /tmp/steamcmd.tar.gz http://media.steampowered.com/installer/steamcmd_linux.tar.gz \
+    && tar zxvf steamcmd_linux.tar.gz \
+    && rm steamcmd_linux.tar.gz \
+    && chmod +x ./steamcmd.sh
 
 ADD start.sh /start.sh
 
@@ -42,8 +39,7 @@ ADD .update /.update
 
 WORKDIR /
 
-EXPOSE 28015
-EXPOSE 28016
+EXPOSE 21025
 
 ENV STEAM_LOGIN FALSE
 

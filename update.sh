@@ -6,6 +6,10 @@ if [ -z "$1" ]; then
 	exit
 fi
 
+if [ -z "$2" ]; then
+	$2=latest
+fi
+
 touch /.update
 
 
@@ -24,8 +28,10 @@ fi
 	+login "$1" \
 	+force_install_dir /starbound/ \
 	+app_update 211820 validate \
- 	+workshop_download_item 211820 729480149 \
 	+quit \
 	&& rm /.update
+
+curl -L https://github.com/sayterdarkwynd/FrackinUniverse/releases/download/${FRACKINUNIVERSE_VERSION}/FrackinUniverse.pak -o /starbound/mods/FrackinUniverse.pak
+
 exit
 

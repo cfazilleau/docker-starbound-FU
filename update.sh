@@ -7,7 +7,9 @@ if [ -z "$1" ]; then
 fi
 
 if [ -z "$2" ]; then
-	$2=latest
+	FRACKINUNIVERSE_VERSION=latest
+else
+	FRACKINUNIVERSE_VERSION=$2
 fi
 
 touch /.update

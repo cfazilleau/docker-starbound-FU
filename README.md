@@ -36,7 +36,7 @@ docker pull ghcr.io/cfazilleau/frackin-universe-docker:main
 
 ## Run the image
 ```sh
-docker run --name frackinuniverse -p 21025:21025 -v <starbound directory>:/starbound ghcr.io/cfazilleau/frackin-universe-docker
+docker run --name frackinuniverse -p 21025:21025 -v <starbound directory>:/starbound ghcr.io/cfazilleau/frackin-universe-docker:main
 ```
 
 Replace `<starbound directory>` with where you wish to store your Starbound installation.

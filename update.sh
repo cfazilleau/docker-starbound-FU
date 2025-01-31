@@ -7,9 +7,9 @@ if [ -z "$1" ]; then
 fi
 
 if [ -z "$2" ]; then
-	FRACKINUNIVERSE_VERSION=latest
+	FRACKINUNIVERSE_VERSION=latest/download
 else
-	FRACKINUNIVERSE_VERSION=$2
+	FRACKINUNIVERSE_VERSION=download/$2
 fi
 
 touch /.update
@@ -33,7 +33,7 @@ fi
 	+quit \
 	&& rm /.update
 
-curl -L https://github.com/sayterdarkwynd/FrackinUniverse/releases/download/${FRACKINUNIVERSE_VERSION}/FrackinUniverse.pak -o /starbound/mods/FrackinUniverse.pak
+curl -L https://github.com/sayterdarkwynd/FrackinUniverse/releases/${FRACKINUNIVERSE_VERSION}/FrackinUniverse.pak -o /starbound/mods/FrackinUniverse.pak
 
 exit
 
